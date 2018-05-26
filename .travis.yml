@@ -1,0 +1,37 @@
+dist: trusty
+sudo: false
+
+language: node_js
+node_js:
+  - "8"
+  
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+
+cache:
+  directories:
+     - ./node_modules
+
+install:
+  - npm install
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  keep-history: true
+  verbose: false
+  local-dir: dist
+  on:
+    # branch: develop
+    all_branches: true
+    condition: $TRAVIS_BRANCH =~ ^develop|master$
+
+script:
+  # Use Chromium instead of Chrome.
+  - export CHROME_BIN=chromium-browser
+  - xvfb-run -a npm run build:release
