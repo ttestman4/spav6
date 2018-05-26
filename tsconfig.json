@@ -15,6 +15,16 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    // Custom Options
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "pretty": true,
+    "removeComments": true,
+    "strictNullChecks": true
   }
 }

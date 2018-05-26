@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng serve spav6 -o",
+    "build": "ng build --prod",
     "test": "ng test",
+    "test:coverage": "npm run test -- --watch=false --code-coverage",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
