@@ -13,11 +13,12 @@ addons:
       - google-chrome-stable
 
 cache:
+  yarn: true
   directories:
      - ./node_modules
 
 install:
-  - npm install
+  - yarn install
 
 deploy:
   provider: pages
