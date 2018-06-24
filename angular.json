@@ -122,5 +122,8 @@
       }
     }
   },
-  "defaultProject": "spav6"
+  "defaultProject": "spav6",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
